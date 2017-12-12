@@ -198,8 +198,8 @@ def main():
         take_action_on_processes(processes, lambda s: s not in 'DOWN', 'stop', 'Success')
 
     if state == 'reload':
-        if len(processes) == 0:
-            module.fail_json(name=name, msg="ERROR (no such service)")
+#        if len(processes) == 0:
+#            module.fail_json(name=name, msg="ERROR (no such service)")
         take_action_on_processes(processes, lambda s: True, 'reload', 'reload')
 
     if state == 'repair':
